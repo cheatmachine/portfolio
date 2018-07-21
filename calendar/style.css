@@ -1,0 +1,31 @@
+.calendar {
+    border: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+}
+
+.calendar h1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.calendar .changeBtn {
+    background: silver;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.calendar .day {
+    width: calc(100% / 7);
+    height: 40px;
+    background: beige;
+    border: 1px solid black;
+    margin: -1px 0 0 -1px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    font-weight: bold;
+}
