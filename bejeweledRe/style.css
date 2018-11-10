@@ -6,7 +6,7 @@
 }
 
 .game button {
-    width: calc(100% / 9);
+    width: calc(100% / 6);
     border: 1px solid tan;
     height: 30px;
     background: transparent;
@@ -15,4 +15,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.points {
+    display: flex;
+    
 }

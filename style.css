@@ -1,4 +1,172 @@
 body {
-    background: lightblue;
+    margin: 0;
+}
+
+.top-row {
+    background: rgb(70, 69, 69);
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+    position: fixed;
+    width: 100%;
+}
+
+.top-row div {
+    margin: 0px 10px;
+    align-items: center;
+}
+
+.top-row button.highlight {
+    background-color: rgba(200, 200, 200, 0.5)
+}
+
+.top-row button {
+    height: 40px;
+    background-color: transparent;
+    border: 1px transparent;
+    font-size: 15px;
+    color: rgb(255, 115, 0);
+    font-weight: bold;
+    transition: all 0.25s;
+}
+
+.top-row button:hover {
+    color: white;
+}
+
+.top-nav {
+    background-color: rgb(37, 37, 37);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    color: white;
+    box-shadow: 0 1px 5px black;
+    position: fixed;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.top-nav button {
+    font-size: 15px;
+    font-family: Sans-serif;
+    height: 50px;
+    background-color: transparent;
+    border: 1px transparent;
+    color: white;
+    width: 100px;
+    transition: all 0.2s;
+}
+
+.top-nav button.red {
+    border-bottom: 2px solid red;
+}
+
+.top-nav button.blue {
+    border-bottom: 2px solid rgb(59, 134, 248);
+}
+.top-nav button.green {
+    border-bottom: 2px solid rgb(8, 255, 8);
+}
+
+.top-nav button.pink {
+    border-bottom: 2px solid rgb(240, 49, 145);
+}
+
+.top-nav button.red:hover {
+    text-shadow: 0px 0px 4px white;
+    border-bottom: 2px solid white;
+    border-shadow: 0px 0px 3px white;
+    background: linear-gradient(rgb(37, 37, 37) 80%, red);
+}
+
+.top-nav button.blue:hover {
+    text-shadow: 0px 0px 4px white;
+    border-bottom: 2px solid white;
+    border-shadow: 0px 0px 3px white;
+    background: linear-gradient(rgb(37, 37, 37) 80%, rgb(59, 134, 248));
+}
+
+.top-nav button.green:hover {
+    text-shadow: 0px 0px 4px white;
+    border-bottom: 2px solid white;
+    border-shadow: 0px 0px 3px white;
+    background: linear-gradient(rgb(37, 37, 37) 80%, rgb(8, 255, 8));
+}
+
+.top-nav button.pink:hover {
+    text-shadow: 0px 0px 4px white;
+    border-bottom: 2px solid white;
+    border-shadow: 0px 0px 3px white;
+    background: linear-gradient(rgb(37, 37, 37) 80%, rgb(240, 49, 145));
+}
+
+.main1 {
+    height: 900px;
+    background: url('https://wallpaper-house.com/data/out/10/wallpaper2you_374330.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 1px black;
+}
+
+.main1 h1 {
+    margin: 0;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+}
+
+.main1 div {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.main2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 170px;
+    padding: 0 20px;
+}
+
+.main2 img {
+    height: 100px;
+    padding: 40px;
+    transition: all 0.25s;
+}
+
+.main2 img:first-child:hover {
+    transform: scale(1.06);
+}
+
+.main2 img:nth-child(2):hover {
+    transform: scale(1.04);
+}
+
+.main2Text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main2Text div {
+    display: flex;
     color: black;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.main2Text .Insta {
+    padding: 0px 0px 30px 50px;
+}
+
+.main2Text .contact {
+    padding: 0px 55px 30px 10px;
 }

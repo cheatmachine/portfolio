@@ -1,17 +1,20 @@
 class Bejeweled {
     constructor() {
-        this.SIZE = 9;
+        this.SIZEX = 6;
+        this.SIZEY = 7;
         this.jewels = ['🍌', '🍉', '🍇', '🍓', '🍎', '🍒'];
         this.board = [];
         this.locked = false;
+        this.point = 0;
         this.container = document.querySelector(".game");
+        this.scoreboard = document.querySelector(".points");
 
 
-        for (let i = 0; i < this.SIZE; i++) {
+        for (let i = 0; i < this.SIZEY; i++) {
 
             this.board[i] = []
 
-            for (let j = 0; j < this.SIZE; j++) {
+            for (let j = 0; j < this.SIZEX; j++) {
                 this.board[i][j] = this.jewels[Math.floor(Math.random() * this.jewels.length)];
             }
         }
@@ -19,6 +22,7 @@ class Bejeweled {
 
     render() {
         this.container.innerHTML = '';
+        this.scoreboard.innerHTML = '';
         if(this.locked) {
             this.container.style.background = "#eee";
         } else {
@@ -29,6 +33,22 @@ class Bejeweled {
                 this.createBtn(col, r, c);
             })
         })
+        this.displayScoreboard();
+        if(!this.locked)
+        this.updateScore(this.point);
+        
+    }
+
+    displayScoreboard() {
+        let display = document.createElement("div");
+        display.innerHTML = "Points:";
+        this.scoreboard.appendChild(display);
+    }
+
+    updateScore(scoreIn) {
+        let score = document.createElement("div");
+        score.innerHTML = scoreIn;
+        this.scoreboard.appendChild(score);
     }
 
     createBtn(content, r, c) {
@@ -49,8 +69,8 @@ class Bejeweled {
     }
     fall() {
         //makes the fruits fall
-        for(let i = this.SIZE-1; i >= 1; i--) {
-            for(let j = 0; j < this.SIZE; j++) {
+        for(let i = this.SIZEY-1; i >= 1; i--) {
+            for(let j = 0; j < this.SIZEX; j++) {
                 if(this.board[i][j] === '') {
                     this.board[i][j] = this.board[i-1][j];
                     this.board[i-1][j] = '';
@@ -58,9 +78,10 @@ class Bejeweled {
             }
         }
         //fills any empty cells in first row
-        for(let c = 0 ; c < this.SIZE; c++) {
+        for(let c = 0 ; c < this.SIZEX; c++) {
             if(this.board[0][c] === '') {
                 this.board[0][c] = this.jewels[Math.floor(Math.random() * this.jewels.length)];
+                this.point++;
             }
         }
 
@@ -72,8 +93,8 @@ class Bejeweled {
         this.render();
     }
     doesZeroExist() {
-        for(let i = this.SIZE-1; i >= 1; i--) {
-            for(let j = 0; j < this.SIZE; j++) {
+        for(let i = this.SIZEY-1; i >= 1; i--) {
+            for(let j = 0; j < this.SIZEX; j++) {
                 if(this.board[i][j] === '') {
                     return true;
                 }
@@ -83,8 +104,8 @@ class Bejeweled {
     }
 
     remove(type, r, c) {
-        if(r < 0 || r >= this.SIZE) return;
-        if(c < 0 || c >= this.SIZE) return;
+        if(r < 0 || r >= this.SIZEY) return;
+        if(c < 0 || c >= this.SIZEX) return;
 
         if(this.board[r][c] !== type) return;
         
@@ -94,10 +115,13 @@ class Bejeweled {
         this.remove(type, r+1, c);
         this.remove(type, r, c-1);
         this.remove(type, r, c+1);
-        this.remove(type, r-1, c-1);
-        this.remove(type, r+1, c-1);
-        this.remove(type, r-1, c+1);
-        this.remove(type, r+1, c+1);
+
+//diagonals
+
+        // this.remove(type, r-1, c-1);
+        // this.remove(type, r+1, c-1);
+        // this.remove(type, r-1, c+1);
+        // this.remove(type, r+1, c+1);
 
     }
     pointAdd() {
