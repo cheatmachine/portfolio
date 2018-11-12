@@ -174,7 +174,7 @@ body {
     margin-left: 350px;
     margin-right: 350px;
     margin-top: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .bioHead {
@@ -184,7 +184,7 @@ body {
     padding: 5px 0px 5px 0px;
 }
 
-.interestsIcon {
+/* .interestsIcon {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -197,7 +197,7 @@ body {
     height: 90px;
     padding: 40px;
     transition: all 0.25s;
-}
+} */
 
 .interestsHead {
     display: flex;
@@ -206,16 +206,39 @@ body {
     padding: 5px 0px 5px 0px;
 }
 
-.interestsIcon img:first-child:hover {
-    transform: scale(1.06);
-}
-
 .interestsText {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 350px;
     margin-right: 350px;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 50px;
+}
+
+.programHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px 5px 0px;
+}
+
+.programIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 170px;
+    padding: 0 20px;
+}
+
+.programIcon img {
+    height: 90px;
+    padding: 20px 40px 40px 40px;
+    transition: all 0.25s;
+}
+
+.programIcon img:first-child:hover {
+    transform: scale(1.06);
+    
 }
