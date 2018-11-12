@@ -164,9 +164,19 @@ body {
 }
 
 .main2Text .Insta {
-    padding: 0px 0px 30px 50px;
+    padding: 0px 0px 30px 0px;
 }
 
 .main2Text .contact {
     padding: 0px 55px 30px 10px;
+}
+
+.bio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
