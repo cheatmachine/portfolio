@@ -136,8 +136,8 @@ body {
 }
 
 .main2 img {
-    height: 100px;
-    padding: 40px;
+    height: 90px;
+    padding: 20px 40px 40px 40px;
     transition: all 0.25s;
 }
 
@@ -146,13 +146,14 @@ body {
 }
 
 .main2 img:nth-child(2):hover {
-    transform: scale(1.04);
+    transform: scale(1.06);
 }
 
 .main2Text {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 
 .main2Text div {
@@ -161,14 +162,9 @@ body {
     font-weight: bold;
     font-family: sans-serif;
     font-size: 20px;
-}
-
-.main2Text .Insta {
-    padding: 0px 0px 30px 0px;
-}
-
-.main2Text .contact {
-    padding: 0px 55px 30px 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px 0px 50px;
 }
 
 .bio {
@@ -198,7 +194,7 @@ body {
 }
 
 .interestsIcon img {
-    height: 100px;
+    height: 90px;
     padding: 40px;
     transition: all 0.25s;
 }
