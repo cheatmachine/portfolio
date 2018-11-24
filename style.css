@@ -14,7 +14,7 @@ body {
 
 .top-row div {
     margin: 0px 10px;
-    align-items: center;
+    align-items: right;
 }
 
 .top-row button.highlight {
