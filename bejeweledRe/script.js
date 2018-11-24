@@ -64,7 +64,7 @@ class Bejeweled {
         this.locked = true;
         this.remove(this.board[r][c], r, c);
         this.render();
-        setTimeout(this.fall.bind(this), 1000);
+        setTimeout(this.fall.bind(this), 400);
         
     }
     fall() {
