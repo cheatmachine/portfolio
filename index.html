@@ -1,69 +1,399 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>\</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <style>
 
-    <body>
-        <div class="top-row">
-            <!-- <button>..</button>
+        * {
+            box-sizing: border-box;
+        }
+    
+    body {
+        margin: 0;
+    }
+    .section {
+        min-height: 100px;
+        display:flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .section.black {
+        background: #323239;
+        color: white;
+    }
+    .section.white {
+        background: #ebecf0;
+    }
+    .section .container {
+        max-width: 1600px;
+        width: 80%;
+    }
 
-            <button>..</button> -->
+    .menu {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 30px;
+    }
 
-        </div>
-        <div class="top-nav">
-            <a href="#bio"><button class="red">About Me</button></a>
-            <a href="#interests"><button class="blue">Interests</button></a>
-            <a href="#programs"><button class="green">Programming</button></a>
-            <!-- <button class="pink"><a href=""></a>Social Media</a></button> -->
-        </div>
-        <div class="main1">
-            <h1>Personal Portfolio</h1>
-            <div>Euvin Kang</div>
-        </div>
-        <div id="bio"></div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="BioHead"><h2>About Me</h2></div>
-        <br>
-        <br>
-        <div class="bio">
-            <p>Hello, reader! My name is Euvin Kang and this is my self programmed portfolio! I believe that a good way to demonstrate the knowledge that I received from almost four years of programming is always through creating something.  </p>
-        </div>
-        <br>
-        <br>
-        <div id="interests"></div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="interestsHead"><h2>Interests</h2></div>       
-        <div class="main2">
-            <!-- <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/67671-200.png" alt=""> -->
-            <a href="https://www.instagram.com/euvink/"><img src="https://image.flaticon.com/icons/png/512/69/69366.png" alt=""></a>
-            <a href="https://www.youtube.com/channel/UCYGs0zDyliXsue1U78RZTNQ/videos?disable_polymer=1"><img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c500.png" alt=""></a>
-        </div>
+    .menuButton {
+        color: white;
+        border: 0px;
+        background: transparent;
+        font-size: 13px;
+        font-family: Sans-serif;
+    }
 
-        <div class="main2Text">
-            <div class="Insta">Instagram</div> <div class="yt">Youtube</div>
-        </div>
-        <div class="interestsText">
-                <p>
-                    My interests.
-                </p>
+    .but1 {
+        margin: 0px 20px 0px 20px;
+    }
+
+    .but1 button:hover {
+        font-style: oblique;
+    }
+
+    .but2 {
+        margin: 0px 20px 0px 20px;
+    }
+
+    .but2 button:hover {
+        font-style: oblique;
+    }
+
+    .but3 {
+        margin: 0px 20px 0px 20px;
+    }
+
+    .but3 button:hover {
+        font-style: oblique;
+    }
+
+    .MenuName {
+        font-family: Sans-serif;
+        font-size: 17px;
+        flex-grow: 1;
+    }
+
+    .main {
+        max-width: 1400px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        padding-left: 150px;
+        padding-right: 150px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .main2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main2 img {
+        height: 250px;
+    }
+
+    .main2 .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .header .headline {
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+    }
+
+    .main3 {
+        max-width: 1400px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        padding-left: 150px;
+        padding-right: 150px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .main4 img {
+        height: 275px;
+    }
+    
+    .main4 {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+
+    .words .header2 {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .header2 .headline2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+    }
+
+    .words {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+
+    .main4 img {
+        margin-left: 35px;
+    }
+
+    .bioSpace .bio {
+        font-family: sans-serif;
+        font-size: 12px;
+        width: 325px;
+        max-width: 325px;
+    }
+
+    .interestsHead {
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px 5px 0px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    margin-bottom: 75px;
+    }
+
+    .main5 {
+        max-width: 1400px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        padding-left: 150px;
+        padding-right: 150px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        flex-direction: column;
+    }
+
+    .interestIcon1 img {
+        height: 50px;
+        transition: all 0.25s;
+    }
+
+    .interestIcon1 {
+        margin: 0px 170px 0px 170px;
+    }
+
+    .interestIcon1 img:first-child:hover {
+        transform: scale(1.15);
+    }
+
+    .interestIcon2 img {
+        height: 50px;
+        transition: all 0.25s;
+    }
+
+    .interestIcon2 {
+        margin: 0px 170px 0px 170px;
+    }
+
+    .interestIcon2 img:first-child:hover {
+        transform: scale(1.15);
+    }
+
+    .interestIcons {
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        height: 160px;
+        padding: 0 20px;
+    }
+
+    .desc {
+        font-family: sans-serif;
+        font-size: 12px;
+        max-width: 430px;
+    }
+
+    .main6 {
+        max-width: 1400px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        padding-left: 150px;
+        padding-right: 150px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        flex-direction: column;
+    }
+    
+    .programsHead {
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0px 5px 0px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        margin-bottom: 75px;
+    }
+
+    .programIcons {
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        height: 160px;
+        padding: 0 20px;
+    }
+
+    .program1 img {
+        height: 40px;
+        transition: all 0.25s;
+    }
+
+    .program1 {
+        margin: 0px 80px 0px 100px;
+    }
+
+    .program1 img:first-child:hover {
+        transform: scale(1.15);
+    }
+
+    .program2 img {
+        height: 40px;
+        transition: all 0.25s;
+    }
+
+    .program2 {
+        margin: 0px 100px 0px 100px;
+    }
+
+    .program2 img:first-child:hover {
+        transform: scale(1.15);
+    }
+
+    .program3 img {
+        height: 30px;
+        transition: all 0.25s;
+    }
+
+    .program3 {
+        margin: 0px 100px 0px 80px;
+    }
+
+    .program3 img:first-child:hover {
+        transform: scale(1.15);
+    }
+
+    .gray {
+        color: gray;
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+    }
+
+    .desc2 {
+        font-family: sans-serif;
+        font-size: 12px;
+        max-width: 490px;
+    }
+    
+    .headline2misc {
+        font-family: sans-serif;
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="section black">
+        <div class="container">
+            <div class="menu">
+                <div class="MenuName">Euvin Kang</div>
+                <div class="but1">
+                    <a href="#bio"><button class="menuButton">About Me</button></a>
+                </div>
+                <div class="but2">
+                    <a href="#interests"><button class="menuButton">Interests</button></a>
+                </div>
+                <div class="but3">
+                    <a href="#programs"><button class="menuButton">Programming</button></a>
+                </div>
             </div>
-        <div id="programs"></div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="programHead"><h2>Programming</h2></div>
-        <div class="programIcon">
-            <a href="bejeweledRe/index.html"><img src="http://pixelartmaker.com/art/8b5bc0fe2d48a0e.png" alt=""></a>
-            <a href="circles/index.html"><img src="http://www.grimaldos.es/cursos/imgdig/ilus/prev/cmyk.png" alt=""></a>
-            <a href="todolist/index.html"><img src="https://cdn.pixabay.com/photo/2016/03/31/19/14/list-1294835_960_720.png" alt=""></a>
-        </div>
 
-    </body>
+            <div class="main">
+                <div class="main2">
+                    <img src="https://i.gyazo.com/23bb048bd7ea28c3fe0a888e2d78545d.png" alt="">
+                    <div class="header">
+                        <div class="headline, gray">Personal &nbsp;Portfolio</div>
+                        <div class="headline">Euvin &nbsp;Kang</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="section white">
+        <div class="main3">
+            <div class="main4">
+                <img src="https://i.gyazo.com/6acc3e6621cde0912be61edaa58f62c0.png" alt="">
+                <div class="words">
+                    <div class="header2">
+                        <div id="bio" class="headline2, gray">Bio</div>
+                        <div class="headline2">I &nbsp;am &nbsp;Euvin &nbsp;Kang.</div>  
+                        <div class="headline2misc">___________</div>
+                    </div>
+                    <div class="bioSpace">
+                        <div class="bio">My programming experiences include Java, Javascript, and web development.</div>
+                        <div class="bio">I love doing flips and have been doing so for over a year.</div>
+                        <div class="bio">Experience with animating stop motion with legos and clay, animating drawings using Flash, and animating three dimensional models using Blender.</div>
+                        <div class="bio">I am an ex-member of Code Orange Robotics and participated in the designing, programming, and construction process.</div>
+                        <div class="bio">Currently, I am a member of our A.I. club at school, learning to program in Python and participating in local competitions where we develop solutions to a given task.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section black">
+        <div class="main5">
+            <div id="interests" class="interestsHead, gray"><div>Interests</div></div>
+            <div class="interestIcons">
+                <div class="interestIcon1">
+                    <a href="https://www.instagram.com/euvink/"><img src="https://www.wowfollowers.com/wp-content/uploads/2017/12/Instagramm.png" alt=""></a>
+                </div>
+                <div class="interestIcon2">
+                    <a href="https://www.youtube.com/channel/UCYGs0zDyliXsue1U78RZTNQ/videos?disable_polymer=1"><img src="https://cdn.pixabay.com/photo/2015/08/11/12/32/youtube-884381__340.png" alt=""></a>
+                </div>
+            </div>
+            <div class="desc">On my Instagram page(left), I post videos on my flipping progress. I try to build a community within my instagram page consisting of other friends and flippers from around the world. I upload my edits on Youtube(right). My topic of focus is on video games, but the purpose of my edits is not to show what the game is about. Video games just appeal to a bigger audience, and the features in these video games are what shape my edits. Feel free to click on an icon to view any my pages!</div>
+        </div> 
+    </div>
+    <div class="section white">
+        <div class="main6">
+            <div id="programs" class="programsHead, gray"><div>Programming</div></div>
+            <div class="programIcons">
+                <div class="program1">
+                    <a href="bejeweledRe/index.html"><img src="http://pixelartmaker.com/art/8b5bc0fe2d48a0e.png" alt=""></a>
+                </div>
+                <div class="program2">
+                    <a href="circles/index.html"><img src="http://www.grimaldos.es/cursos/imgdig/ilus/prev/cmyk.png" alt=""></a>
+                </div>
+                <div class="program3">
+                    <a href="todolist/index.html"><img src="https://cdn.pixabay.com/photo/2016/03/31/19/14/list-1294835_960_720.png" alt=""></a>
+                </div>
+            </div>
+            <div class="desc2">The project on the left showcases an example program coded through DOM API, which mimicks the well-known Bejeweled game, except that the "gems" are now fruits. The project in the middle is an example program that includes a canvas with an interactive feature involving colorful and bouncy circles. Finally, the third project is a mini example of a program coded through ReactJS, which is a to-do list that the user can use to keep reminders. Feel free to click on any of the icons to view these projects!</div>
+        </div>
+    </div>
+    
+</body>
 </html>
