@@ -1,419 +1,445 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>\</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
-<style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>\</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-* {
-box-sizing: border-box;
-}
+        body {
+            margin: 0;
+            font-family: 1.2em;
+        }
 
-body {
-margin: 0;
-font-family: 1.2em;
-}
-.for_bg {
-position: fixed;
-left: 0;
-top: 0;
-width: 100vw;
-height: 100vh;
-background-image: url('https://images.unsplash.com/photo-1542931299-f936e61318ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f4f543c27e738600ca6a51d71ca27c2f&auto=format&fit=crop&w=613&q=80');
-z-index: -1;
-}
-.section {
-min-height: 100px;
-display:flex;
-justify-content: center;
-align-items: stretch;
-}
-.section.black {
-/* background: #323239; */
-background: rgba(50, 50, 57, 0.8);
-color: white;
-}
-.section.white {
-background: #ebecf0;
-}
-.section .container {
-max-width: 1600px;
-width: 80%;
-}
+        .for_bg {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1491484815100-6f2890d04007?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f4bffc8a3323fb01c0870799c431009e&auto=format&fit=crop&w=750&q=80');
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+        }
 
-.menu {
-height: 50px;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
-margin-top: 30px;
-}
+        .section {
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
 
-.menuButton {
-color: white;
-border: 0px;
-background: transparent;
-font-size: 13px;
-font-family: Sans-serif;
-}
+        .section.black {
+            /* background: #323239; */
+            background: rgba(50, 50, 57, 0.4);
+            color: white;
+        }
 
-.but1 {
-margin: 0px 20px 0px 20px;
-}
+        .section.white {
+            background: #ebecf0;
+        }
 
-.but1 button:hover {
-font-style: oblique;
-}
+        .section .container {
+            max-width: 1600px;
+            width: 80%;
+        }
 
-.but2 {
-margin: 0px 20px 0px 20px;
-}
+        .menu {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 30px;
+        }
 
-.but2 button:hover {
-font-style: oblique;
-}
+        .menuButton {
+            color: white;
+            border: 0px;
+            background: transparent;
+            font-size: 13px;
+            font-family: Sans-serif;
+        }
 
-.but3 {
-margin: 0px 20px 0px 20px;
-}
+        .but1 {
+            margin: 0px 20px 0px 20px;
+        }
 
-.but3 button:hover {
-font-style: oblique;
-}
+        .but1 button:hover {
+            font-style: oblique;
+        }
 
-.MenuName {
-font-family: Sans-serif;
-font-size: 17px;
-flex-grow: 1;
-}
+        .but2 {
+            margin: 0px 20px 0px 20px;
+        }
 
-.main {
-max-width: 1400px;
-display: flex;
-justify-content: center;
-width: 100%;
-align-items: center;
-padding-left: 150px;
-padding-right: 150px;
-margin-top: 100px;
-margin-bottom: 100px;
-}
+        .but2 button:hover {
+            font-style: oblique;
+        }
 
-.main2 {
-display: flex;
-flex-direction: row;
-}
+        .but3 {
+            margin: 0px 20px 0px 20px;
+        }
 
-.main2 img {
-height: 250px;
-}
+        .but3 button:hover {
+            font-style: oblique;
+        }
 
-.main2 .header {
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin-left: 50px;
-margin-right: 50px;
-}
+        .MenuName {
+            font-family: Sans-serif;
+            font-size: 17px;
+            flex-grow: 1;
+        }
 
-.header .headline {
-font-family: 'Raleway', sans-serif;
-font-size: 30px;
-}
+        .main {
+            max-width: 1400px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            padding-left: 150px;
+            padding-right: 150px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
 
-.main4 {
-max-width: 1400px;
-display: flex;
-justify-content: center;
-width: 100%;
-align-items: center;
-padding-left: 150px;
-padding-right: 150px;
-margin-top: 100px;
-margin-bottom: 100px;
-}
-@media screen and (max-width: 800px) {
-.main4 {
-flex-direction: column;
-}
-.main4 .youtube {
-margin-bottom: 50px;
-}
-}
+        .main2 {
+            display: flex;
+            flex-direction: row;
+        }
 
-.main4 .youtube {
-flex-grow: 1;
-height: 275px;
-width: 100%;
-}
+        .main2 img {
+            height: 250px;
+        }
 
-.words .header2 {
-display: flex;
-flex-direction: column;
-margin-bottom: 20px;
-}
+        .main2 .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
 
-.header2 .headline2 {
-font-family: 'Raleway', sans-serif;
-font-size: 30px;
-}
+        .header .headline {
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+        }
 
-.words {
-display: flex;
-flex-direction: column;
-margin-left: 50px;
-}
+        .main4 {
+            max-width: 1400px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            padding-left: 150px;
+            padding-right: 150px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
 
-.main4 img {
-margin-left: 35px;
-}
+        @media screen and (max-width: 800px) {
+            .main4 {
+                flex-direction: column;
+            }
 
-.bioSpace .bio {
-font-family: sans-serif;
-font-size: 12px;
-width: 325px;
-max-width: 325px;
-}
+            .main4 .youtube {
+                margin-bottom: 50px;
+            }
+        }
 
-.interestsHead {
-align-items: center;
-justify-content: center;
-padding: 5px 0px 5px 0px;
-font-family: 'Raleway', sans-serif;
-font-size: 30px;
-margin-bottom: 75px;
-}
+        .main4 .youtube {
+            flex-grow: 1;
+            height: 275px;
+            width: 100%;
+        }
 
-.main5 {
-max-width: 1400px;
-display: flex;
-justify-content: center;
-width: 100%;
-align-items: center;
-padding-left: 150px;
-padding-right: 150px;
-margin-top: 100px;
-margin-bottom: 100px;
-flex-direction: column;
-}
+        .words .header2 {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
 
-.interestIcon1 img {
-height: 50px;
-transition: all 0.25s;
-}
+        .header2 .headline2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+        }
 
-.interestIcon1 {
-margin: 0px 170px 0px 170px;
-}
+        .words {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+        }
 
-.interestIcon1 img:first-child:hover {
-transform: scale(1.15);
-}
+        .main4 img {
+            margin-left: 35px;
+        }
 
-.interestIcon2 img {
-height: 50px;
-transition: all 0.25s;
-}
+        .bioSpace .bio {
+            font-family: sans-serif;
+            font-size: 12px;
+            width: 325px;
+            max-width: 325px;
+        }
 
-.interestIcon2 {
-margin: 0px 170px 0px 170px;
-}
+        .interestsHead {
+            align-items: center;
+            justify-content: center;
+            padding: 5px 0px 5px 0px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+            margin-bottom: 75px;
+        }
 
-.interestIcon2 img:first-child:hover {
-transform: scale(1.15);
-}
+        .main5 {
+            max-width: 1400px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            padding-left: 150px;
+            padding-right: 150px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            flex-direction: column;
+        }
 
-.interestIcons {
-display: flex;
-flex-direction: row;
-align-items:center;
-height: 160px;
-padding: 0 20px;
-}
+        .interestIcon1 img {
+            height: 50px;
+            transition: all 0.25s;
+        }
 
-.desc {
-font-family: sans-serif;
-font-size: 12px;
-max-width: 430px;
-}
+        .interestIcon1 {
+            margin: 0px 170px 0px 170px;
+        }
 
-.main6 {
-max-width: 1400px;
-display: flex;
-justify-content: center;
-width: 100%;
-align-items: center;
-padding-left: 150px;
-padding-right: 150px;
-margin-top: 100px;
-margin-bottom: 100px;
-flex-direction: column;
-}
+        .interestIcon1 img:first-child:hover {
+            transform: scale(1.15);
+        }
 
-.programsHead {
-align-items: center;
-justify-content: center;
-padding: 5px 0px 5px 0px;
-font-family: 'Raleway', sans-serif;
-font-size: 30px;
-margin-bottom: 75px;
-}
+        .interestIcon2 img {
+            height: 50px;
+            transition: all 0.25s;
+        }
 
-.programIcons {
-display: flex;
-flex-direction: row;
-align-items:center;
-height: 160px;
-padding: 0 20px;
-}
+        .interestIcon2 {
+            margin: 0px 170px 0px 170px;
+        }
 
-.program1 img {
-height: 40px;
-transition: all 0.25s;
-}
+        .interestIcon2 img:first-child:hover {
+            transform: scale(1.15);
+        }
 
-.program1 {
-margin: 0px 80px 0px 100px;
-}
+        .interestIcons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 160px;
+            padding: 0 20px;
+        }
 
-.program1 img:first-child:hover {
-transform: scale(1.15);
-}
+        .desc {
+            font-family: sans-serif;
+            font-size: 12px;
+            max-width: 430px;
+        }
 
-.program2 img {
-height: 40px;
-transition: all 0.25s;
-}
+        .main6 {
+            max-width: 1400px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+            padding-left: 150px;
+            padding-right: 150px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            flex-direction: column;
+        }
 
-.program2 {
-margin: 0px 100px 0px 100px;
-}
+        .programsHead {
+            align-items: center;
+            justify-content: center;
+            padding: 5px 0px 5px 0px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+            margin-bottom: 75px;
+        }
 
-.program2 img:first-child:hover {
-transform: scale(1.15);
-}
+        .programIcons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 160px;
+            padding: 0 20px;
+        }
 
-.program3 img {
-height: 30px;
-transition: all 0.25s;
-}
+        .program1 img {
+            height: 40px;
+            transition: all 0.25s;
+        }
 
-.program3 {
-margin: 0px 100px 0px 80px;
-}
+        .program1 {
+            margin: 0px 80px 0px 100px;
+        }
 
-.program3 img:first-child:hover {
-transform: scale(1.15);
-}
+        .program1 img:first-child:hover {
+            transform: scale(1.15);
+        }
 
-.gray {
-color: gray;
-font-family: 'Raleway', sans-serif;
-font-size: 30px;
-}
+        .program2 img {
+            height: 40px;
+            transition: all 0.25s;
+        }
 
-.desc2 {
-font-family: sans-serif;
-font-size: 12px;
-max-width: 490px;
-}
+        .program2 {
+            margin: 0px 100px 0px 100px;
+        }
 
-.headline2misc {
-font-family: sans-serif;
-}
+        .program2 img:first-child:hover {
+            transform: scale(1.15);
+        }
 
+        .program3 img {
+            height: 30px;
+            transition: all 0.25s;
+        }
 
-</style>
+        .program3 {
+            margin: 0px 100px 0px 80px;
+        }
+
+        .program3 img:first-child:hover {
+            transform: scale(1.15);
+        }
+
+        .gray {
+            color: gray;
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+        }
+
+        .desc2 {
+            font-family: sans-serif;
+            font-size: 12px;
+            max-width: 490px;
+        }
+
+        .headline2misc {
+            font-family: sans-serif;
+        }
+    </style>
 </head>
-<body>
-<div class="for_bg"></div>
-<div class="section black">
-<div class="container">
-<div class="menu">
-<div class="MenuName">Euvin Kang</div>
-<div class="but1">
-<a href="#bio"><button class="menuButton">About Me</button></a>
-</div>
-<div class="but2">
-<a href="#interests"><button class="menuButton">Interests</button></a>
-</div>
-<div class="but3">
-<a href="#programs"><button class="menuButton">Programming</button></a>
-</div>
-</div>
 
-<div class="main">
-<div class="main2">
-<img
-style="border-radius: 10px"
-src="https://i.gyazo.com/23bb048bd7ea28c3fe0a888e2d78545d.png" alt="">
-<div class="header">
-<div class="headline, gray">Personal &nbsp;Portfolio</div>
-<div class="headline">Euvin &nbsp;Kang</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section white">
-<div class="main3">
-<div class="main4">
-<div class="youtube">
-<!-- <iframe src="https://www.youtube.com/embed/wdhPpVvIKEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; height: 275px" allowfullscreen></iframe> -->
-<iframe src="https://www.youtube.com/embed/A6BsHriY3h0?ecver=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; height: 275px"allowfullscreen></iframe>
-</div>
-<div class="words">
-<div class="header2">
-<div id="bio" class="headline2, gray">Bio</div>
-<div class="headline2">I &nbsp;am &nbsp;Euvin &nbsp;Kang.</div>
-<div class="headline2misc">___________</div>
-</div>
-<div class="bioSpace">
-<div class="bio">My programming experiences include Java, Javascript, and web development.</div>
-<div class="bio">I love doing flips and have been doing so for over a year.</div>
-<div class="bio">Experience with animating stop motion with legos and clay, animating drawings using Flash, and animating three dimensional models using Blender.</div>
-<div class="bio">I am an ex-member of Code Orange Robotics and participated in the designing, programming, and construction process.</div>
-<div class="bio">Currently, I am a member of our A.I. club at school, learning to program in Python and participating in local competitions where we develop solutions to a given task.</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section black">
-<div class="main5">
-<div id="interests" class="interestsHead, gray"><div>Interests</div></div>
-<div class="interestIcons">
-<div class="interestIcon1">
-<a href="https://www.instagram.com/euvink/"><img src="https://www.wowfollowers.com/wp-content/uploads/2017/12/Instagramm.png" alt=""></a>
-</div>
-<div class="interestIcon2">
-<a href="https://www.youtube.com/channel/UCYGs0zDyliXsue1U78RZTNQ/videos?disable_polymer=1"><img src="https://cdn.pixabay.com/photo/2015/08/11/12/32/youtube-884381__340.png" alt=""></a>
-</div>
-</div>
-<div class="desc">On my Instagram page(left), I post videos on my flipping progress. I try to build a community within my instagram page consisting of other friends and flippers from around the world. I upload my edits on Youtube(right). My topic of focus is on video games, but the purpose of my edits is not to show what the game is about. Video games just appeal to a bigger audience, and the features in these video games are what shape my edits. Feel free to click on an icon to view any my pages!</div>
-</div>
-</div>
-<div class="section white">
-<div class="main6">
-<div id="programs" class="programsHead, gray"><div>Programming</div></div>
-<div class="programIcons">
-<div class="program1">
-<a href="bejeweledRe/index.html"><img src="http://pixelartmaker.com/art/8b5bc0fe2d48a0e.png" alt=""></a>
-</div>
-<div class="program2">
-<a href="circles/index.html"><img src="http://www.grimaldos.es/cursos/imgdig/ilus/prev/cmyk.png" alt=""></a>
-</div>
-<div class="program3">
-<a href="todolist/index.html"><img src="https://cdn.pixabay.com/photo/2016/03/31/19/14/list-1294835_960_720.png" alt=""></a>
-</div>
-</div>
-<div class="desc2">The project on the left showcases an example program coded through DOM API, which mimicks the well-known Bejeweled game, except that the "gems" are now fruits. The project in the middle is an example program that includes a canvas with an interactive feature involving colorful and bouncy circles. Finally, the third project is a mini example of a program coded through ReactJS, which is a to-do list that the user can use to keep reminders. Feel free to click on any of the icons to view these projects!</div>
-</div>
-</div>
+<body>
+    <div class="for_bg"></div>
+    <div class="section black">
+        <div class="container">
+            <div class="menu">
+                <div class="MenuName">Euvin Kang</div>
+                <div class="but1">
+                    <a href="#bio"><button class="menuButton">About Me</button></a>
+                </div>
+                <div class="but2">
+                    <a href="#interests"><button class="menuButton">Interests</button></a>
+                </div>
+                <div class="but3">
+                    <a href="#programs"><button class="menuButton">Programming</button></a>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="main2">
+                    <img style="border-radius: 10px" src="https://i.gyazo.com/23bb048bd7ea28c3fe0a888e2d78545d.png" alt="">
+                    <div class="header">
+                        <div class="headline, gray">Personal &nbsp;Portfolio</div>
+                        <div class="headline">Euvin &nbsp;Kang</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section white">
+        <div class="main3">
+            <div class="main4">
+                <div class="youtube">
+                    <!-- <iframe src="https://www.youtube.com/embed/wdhPpVvIKEE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; height: 275px" allowfullscreen></iframe> -->
+                    <iframe src="https://www.youtube.com/embed/A6BsHriY3h0?ecver=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        style="width: 100%; height: 275px" allowfullscreen></iframe>
+                </div>
+                <div class="words">
+                    <div class="header2">
+                        <div id="bio" class="headline2, gray">Bio</div>
+                        <div class="headline2">I &nbsp;am &nbsp;Euvin &nbsp;Kang.</div>
+                        <div class="headline2misc">___________</div>
+                    </div>
+                    <div class="bioSpace">
+                        <div class="bio">My programming experiences include Java, Javascript, and web development.</div>
+                        <div class="bio">I love doing flips and have been doing so for over a year.</div>
+                        <div class="bio">Experience with animating stop motion with legos and clay, animating drawings
+                            using Flash, and animating three dimensional models using Blender.</div>
+                        <div class="bio">I am an ex-member of Code Orange Robotics and participated in the designing,
+                            programming, and construction process.</div>
+                        <div class="bio">Currently, I am a member of our A.I. club at school, learning to program in
+                            Python and participating in local competitions where we develop solutions to a given task.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section black">
+        <div class="main5">
+            <div id="interests" class="interestsHead, gray">
+                <div>Interests</div>
+            </div>
+            <div class="interestIcons">
+                <div class="interestIcon1">
+                    <a href="https://www.instagram.com/euvink/"><img src="https://www.wowfollowers.com/wp-content/uploads/2017/12/Instagramm.png"
+                            alt=""></a>
+                </div>
+                <div class="interestIcon2">
+                    <a href="https://www.youtube.com/channel/UCYGs0zDyliXsue1U78RZTNQ/videos?disable_polymer=1"><img
+                            src="https://cdn.pixabay.com/photo/2015/08/11/12/32/youtube-884381__340.png" alt=""></a>
+                </div>
+            </div>
+            <div class="desc">On my Instagram page(left), I post videos on my flipping progress. I try to build a
+                community within my instagram page consisting of other friends and flippers from around the world. I
+                upload my edits on Youtube(right). My topic of focus is on video games, but the purpose of my edits is
+                not to show what the game is about. Video games just appeal to a bigger audience, and the features in
+                these video games are what shape my edits. Feel free to click on an icon to view any my pages!</div>
+        </div>
+    </div>
+    <div class="section white">
+        <div class="main6">
+            <div id="programs" class="programsHead, gray">
+                <div>Programming</div>
+            </div>
+            <div class="programIcons">
+                <div class="program1">
+                    <a href="bejeweledRe/index.html"><img src="http://pixelartmaker.com/art/8b5bc0fe2d48a0e.png" alt=""></a>
+                </div>
+                <div class="program2">
+                    <a href="circles/index.html"><img src="http://www.grimaldos.es/cursos/imgdig/ilus/prev/cmyk.png"
+                            alt=""></a>
+                </div>
+                <div class="program3">
+                    <a href="https://github.com/cheatmachine/portfolio"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png"
+                            alt=""></a>
+                </div>
+            </div>
+            <div class="desc2">The project on the left showcases an example program coded through DOM API, which
+                mimicks the well-known Bejeweled game, except that the "gems" are now fruits. The project in the middle
+                is an example program that includes a canvas with an interactive feature involving colorful and bouncy
+                circles. All the contents from my portfolio is opensourced at my github page. To view my github page, click on the github icon on the right.</div>
+        </div>
+    </div>
 
 </body>
+
 </html>
