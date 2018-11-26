@@ -123,13 +123,21 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            width: 430px;
             margin-left: 50px;
             margin-right: 50px;
         }
 
         .header .headline {
             font-family: 'Raleway', sans-serif;
-            font-size: 30px;
+            font-size: 80px;
+            font-weight: bold;
+        }
+
+        .header .portfolioName {
+            font-family: 'Raleway', sans-serif;
+            font-size: 48px;
+            color: black;
         }
 
         .main4 {
@@ -195,6 +203,7 @@
             font-family: 'Raleway', sans-serif;
             font-size: 30px;
             margin-bottom: 75px;
+            color: white;
         }
 
         .main5 {
@@ -212,6 +221,7 @@
 
         .interestIcon1 img {
             height: 50px;
+            border: 1px solid black;
             transition: all 0.25s;
         }
 
@@ -223,18 +233,6 @@
             transform: scale(1.15);
         }
 
-        .interestIcon2 img {
-            height: 50px;
-            transition: all 0.25s;
-        }
-
-        .interestIcon2 {
-            margin: 0px 170px 0px 170px;
-        }
-
-        .interestIcon2 img:first-child:hover {
-            transform: scale(1.15);
-        }
 
         .interestIcons {
             display: flex;
@@ -248,6 +246,7 @@
             font-family: sans-serif;
             font-size: 12px;
             max-width: 430px;
+            margin-left: 40px;
         }
 
         .main6 {
@@ -270,6 +269,7 @@
             font-family: 'Raleway', sans-serif;
             font-size: 30px;
             margin-bottom: 75px;
+            color: black;
         }
 
         .programIcons {
@@ -282,6 +282,7 @@
 
         .program1 img {
             height: 40px;
+            border: 1px solid black;
             transition: all 0.25s;
         }
 
@@ -295,6 +296,8 @@
 
         .program2 img {
             height: 40px;
+            padding: 2px;
+            border: 1px solid black;
             transition: all 0.25s;
         }
 
@@ -307,7 +310,9 @@
         }
 
         .program3 img {
-            height: 30px;
+            height: 40px;
+            padding: 2px;
+            border: 1px solid black;
             transition: all 0.25s;
         }
 
@@ -358,7 +363,7 @@
                 <div class="main2">
                     <img style="border-radius: 10px" src="https://i.gyazo.com/23bb048bd7ea28c3fe0a888e2d78545d.png" alt="">
                     <div class="header">
-                        <div class="headline, gray">Personal &nbsp;Portfolio</div>
+                        <div class="headline, portfolioName">Personal &nbsp;Portfolio</div>
                         <div class="headline">Euvin &nbsp;Kang</div>
                     </div>
                 </div>
@@ -381,7 +386,7 @@
                     </div>
                     <div class="bioSpace">
                         <div class="bio">My programming experiences include Java, Javascript, and web development.</div>
-                        <div class="bio">I love doing flips and have been doing so for over a year.</div>
+                        <div class="bio">I am a self-taught flipper and have been flipping for over a year.</div>
                         <div class="bio">Experience with animating stop motion with legos and clay, animating drawings
                             using Flash, and animating three dimensional models using Blender.</div>
                         <div class="bio">I am an member of Code Orange Robotics and participated in the designing,
@@ -395,7 +400,7 @@
     </div>
     <div class="section black">
         <div class="main5">
-            <div id="interests" class="interestsHead, gray">
+            <div id="interests" class="interestsHead">
                 <div>Interests</div>
             </div>
             <div class="interestIcons">
@@ -403,21 +408,14 @@
                     <a href="https://www.instagram.com/euvink/"><img src="https://www.wowfollowers.com/wp-content/uploads/2017/12/Instagramm.png"
                             alt=""></a>
                 </div>
-                <div class="interestIcon2">
-                    <a href="https://www.youtube.com/channel/UCYGs0zDyliXsue1U78RZTNQ/videos?disable_polymer=1"><img
-                            src="https://cdn.pixabay.com/photo/2015/08/11/12/32/youtube-884381__340.png" alt=""></a>
-                </div>
             </div>
-            <div class="desc">On my Instagram page(left), I post videos on my flipping progress. I try to build a
-                community within my instagram page consisting of other friends and flippers from around the world. I
-                upload my edits on Youtube(right). My topic of focus is on video games, but the purpose of my edits is
-                not to show what the game is about. Video games just appeal to a bigger audience, and the features in
-                these video games are what shape my edits. Feel free to click on an icon to view any my pages!</div>
+            <div class="desc">On my Instagram page, I post videos on my flipping progress. I try to build a
+                community within my instagram page consisting of other friends and flippers from around the world. Feel free to click on the icon to view my page!</div>
         </div>
     </div>
     <div class="section white">
         <div class="main6">
-            <div id="programs" class="programsHead, gray">
+            <div id="programs" class="programsHead">
                 <div>Programming</div>
             </div>
             <div class="programIcons">
